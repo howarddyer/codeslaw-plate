@@ -1,32 +1,16 @@
 package main
 
-/*
-ToDo:
-1. Read this site which explains the below code
-   https://gowebexamples.com/hello-world/
-
-2. Turn this simple example into a MVC structure
-
-   controller
-     |
-     + opens view
-        |
-        + gets data using models
-        |
-        + loads template with the model paramters
-        |
-        + writes to screen
-*/
-
-import (
-	"fmt"
+import(
 	"net/http"
+    "./controllers"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, you've requested: %s\n", r.URL.Path)
-	})
+
+	http.HandleFunc("/", controllers.Public)
+	http.HandleFunc("/user/", controllers.User)
+    http.HandleFunc("/admin/", controllers.Admin)
 
 	http.ListenAndServe(":8000", nil)
+
 }
