@@ -6,3 +6,7 @@ type Page struct {
     Type string
     Content string
 }
+
+func (page *Page) UpdateContent(content string) {
+    page.Content = content
+}
