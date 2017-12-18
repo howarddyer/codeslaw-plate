@@ -1,11 +1,10 @@
 package views
 
 import(
-    "html/template"
     "net/http"
+    "../config"
 )
 
 func Admin(w http.ResponseWriter) {
-    tmpl, _ := template.ParseFiles("./templates/layout.html")
-    tmpl.Execute(w, "Admin")
+    config.TemplatesAdmin.ExecuteTemplate(w, "admin", nil)
 }

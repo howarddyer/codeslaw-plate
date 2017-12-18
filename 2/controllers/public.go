@@ -8,10 +8,10 @@ import(
 func Public(w http.ResponseWriter, r *http.Request) {
 
     switch r.URL.Path {
-    	case "/":
-    		views.Home(w)
+    case "/":
+    		views.Public(w)
     	default:
-    		views.Error(w)
+    		views.ErrorPublic(w)
     }
 
 }

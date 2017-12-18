@@ -11,7 +11,7 @@ func Admin(w http.ResponseWriter, r *http.Request) {
         case "/admin/":
             views.Admin(w)
         default:
-    		views.Error(w)
+    		views.ErrorAdmin(w)
     }
 
 }

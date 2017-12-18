@@ -11,7 +11,7 @@ func User(w http.ResponseWriter, r *http.Request) {
         case "/user/":
             views.User(w)
         default:
-    		views.Error(w)
+    		views.ErrorUser(w)
     }
 
 }
