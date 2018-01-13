@@ -15,5 +15,5 @@ func Public(w http.ResponseWriter) {
 
     page.UpdateContent("Welcome to our site")
 
-    config.TemplatesPublic.ExecuteTemplate(w, "public", page)
+    config.Templates.Public.ExecuteTemplate(w, "public", page)
 }

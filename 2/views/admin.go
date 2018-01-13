@@ -6,5 +6,5 @@ import(
 )
 
 func Admin(w http.ResponseWriter) {
-    config.TemplatesAdmin.ExecuteTemplate(w, "admin", nil)
+    config.Templates.Admin.ExecuteTemplate(w, "admin", nil)
 }

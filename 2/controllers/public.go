@@ -8,7 +8,7 @@ import(
 func Public(w http.ResponseWriter, r *http.Request) {
 
     switch r.URL.Path {
-    case "/":
+        case "/":
     		views.Public(w)
     	default:
     		views.ErrorPublic(w)

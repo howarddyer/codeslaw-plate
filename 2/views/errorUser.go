@@ -6,5 +6,5 @@ import(
 )
 
 func ErrorUser(w http.ResponseWriter) {
-    config.TemplatesUser.ExecuteTemplate(w, "error", nil)
+    config.Templates.User.ExecuteTemplate(w, "error", nil)
 }

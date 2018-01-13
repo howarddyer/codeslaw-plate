@@ -3,14 +3,23 @@ package main
 import(
 	"net/http"
     "./controllers"
+    "./config"
+    "./models"
 )
 
 func main() {
 
-	http.HandleFunc("/", controllers.Public)
-	http.HandleFunc("/user/", controllers.User)
-    http.HandleFunc("/admin/", controllers.Admin)
+    // Initialise database
+    models.InitDatabase("./main.db")
 
-	http.ListenAndServe(":8000", nil)
+    // Handle root URL
+    http.HandleFunc("/", controllers.Public)
+
+    // Handle non-root URL
+	http.HandleFunc("/admin/", controllers.Admin)
+	http.HandleFunc("/user/", controllers.User)
+
+    // Listen on port
+	http.ListenAndServe(config.Ports.Test, nil)
 
 }

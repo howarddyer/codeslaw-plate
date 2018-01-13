@@ -6,5 +6,5 @@ import(
 )
 
 func ErrorPublic(w http.ResponseWriter) {
-    config.TemplatesPublic.ExecuteTemplate(w, "error", nil)
+    config.Templates.Public.ExecuteTemplate(w, "error", nil)
 }

@@ -6,5 +6,5 @@ import(
 )
 
 func ErrorAdmin(w http.ResponseWriter) {
-    config.TemplatesAdmin.ExecuteTemplate(w, "error", nil)
+    config.Templates.Admin.ExecuteTemplate(w, "error", nil)
 }

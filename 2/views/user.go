@@ -6,5 +6,5 @@ import(
 )
 
 func User(w http.ResponseWriter) {
-    config.TemplatesUser.ExecuteTemplate(w, "user", nil)
+    config.Templates.User.ExecuteTemplate(w, "user", nil)
 }
