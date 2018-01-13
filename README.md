@@ -1,2 +1,2 @@
-# codeslaw-plate
-Boilerplate for all projects
+# count
+Make things count

@@ -14,10 +14,9 @@ func main() {
 
     // Handle root URL
     http.HandleFunc("/", controllers.Public)
-
+    
     // Handle non-root URL
-	http.HandleFunc("/admin/", controllers.Admin)
-	http.HandleFunc("/user/", controllers.User)
+	http.HandleFunc("/api/", controllers.API)
 
     // Listen on port
 	http.ListenAndServe(config.Ports.Test, nil)
